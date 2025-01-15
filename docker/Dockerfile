@@ -10,7 +10,7 @@ RUN apt-get update && apt-get install -y \
     ros-humble-image-transport \
     v4l-utils \
     nano vim \
-    && apt-get clea
+    && rm -rf /var/lib/apt/lists/*
 
 # **************************************************************************** #
 
