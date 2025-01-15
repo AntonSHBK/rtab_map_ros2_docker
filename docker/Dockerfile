@@ -5,11 +5,15 @@ FROM osrf/ros:humble-desktop
 
 # Установка необходимых пакетов
 RUN apt-get update && apt-get install -y \
+    ros-humble-rviz2 \  
     ros-humble-rtabmap-ros \
-    ros-humble-rviz2 \
     ros-humble-image-transport \
     v4l-utils \
-    nano vim \
+    nano \
+    vim \
+    tree \
+    git \
+    wget \    
     && rm -rf /var/lib/apt/lists/*
 
 # **************************************************************************** #
@@ -43,6 +47,10 @@ RUN pip install --upgrade pip && \
 
 # Устанавливаем переменные окружения для x11
 ENV QT_X11_NO_MITSHM=1
+
+WORKDIR /workspace
+RUN echo "source /opt/ros/humble/setup.bash" >> ~/.bashrc
+RUN echo "alias sros='source /workspace/install/setup.bash'" >> ~/.bashrc
 
 # Команда запуска по умолчанию
 CMD ["bash"]
