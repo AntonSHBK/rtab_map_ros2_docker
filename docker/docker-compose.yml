@@ -1,0 +1,19 @@
+name: rtab_map_ros2_docker
+
+services:
+  rtabmap:
+    # mem_limit: 4G  # выделение до 4 гигабайт памяти
+    # cpus: 2.0  # ограничение до двух процессорных ядер   
+    build:
+      context: ../
+      dockerfile: ./docker/Dockerfile
+    env_file:
+      - ./.env    
+    volumes:
+      - /tmp/.X11-unix:/tmp/.X11-unix:rw  # Доступ к x11 сокету
+      - ../:/workspace/src/rtab_map_ros2_docker
+    devices:
+      - /dev/video0:/dev/video0  # Подключение камеры
+    privileged: true  # Доступ к устройствам
+    network_mode: host  # Для передачи DISPLAY
+    tty: true

@@ -1,0 +1,16 @@
+{
+    "python.autoComplete.extraPaths": [
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "/workspace/install/px4_msgs/local/lib/python3.10/dist-packages",
+        "/workspace/install/multi_drone_msg/local/lib/python3.10/dist-packages",
+        "/workspace/src/px4_multi_drone_sim",
+    ],
+    "python.analysis.extraPaths": [
+        "/opt/ros/humble/lib/python3.10/site-packages",
+        "/opt/ros/humble/local/lib/python3.10/dist-packages",
+        "/workspace/install/px4_msgs/local/lib/python3.10/dist-packages",
+        "/workspace/install/multi_drone_msg/local/lib/python3.10/dist-packages",
+        "/workspace/src/px4_multi_drone_sim",
+    ]
+}

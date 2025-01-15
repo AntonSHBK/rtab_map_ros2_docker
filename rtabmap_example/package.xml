@@ -1,0 +1,22 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>rtab_map_ros2_docker</name>
+  <version>0.1.0</version>
+  <description>Package for rtab_map_ros2_docker</description>
+
+  <maintainer email="anton42@yandex.ru">Anton Pisarenko</maintainer>
+  <license>Apache 2.0</license>
+
+  <!-- Зависимости для работы с ROS 2 -->
+  <depend>rclpy</depend>
+  <depend>launch_ros</depend>
+
+  <buildtool_depend>ament_cmake</buildtool_depend>
+
+  <!-- Дополнительные зависимости -->
+  <depend>ament_index_python</depend>
+
+  <export>
+    <build_type>ament_cmake</build_type>
+  </export>
+</package>
